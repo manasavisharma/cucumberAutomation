@@ -3,6 +3,7 @@ package stepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -21,12 +22,14 @@ public class ABTestclss {
     @When("user clicks on the <Add button>")
     public void user_clicks_on_the_add_button() {
         // Write code here that turns the phrase above into concrete actions
+        driver.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
         throw new io.cucumber.java.PendingException();
     }
 
     @Then("user can view <Delete button>")
     public void user_can_view_delete_button() {
         // Write code here that turns the phrase above into concrete actions
+        driver.quit();
         throw new io.cucumber.java.PendingException();
     }
 }
